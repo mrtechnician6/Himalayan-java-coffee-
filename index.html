@@ -61,7 +61,36 @@
             </video>
         </div>
     </section>
+<section id="order-section" class="offer-section" style="background: #fdfaf6; border-top: 2px solid #e0d5c1;">
+    <div class="offer-container">
+        <h2>Place Your Order</h2>
+        <p>Fill in the details below to send your order directly to our manager via WhatsApp.</p>
+        
+        <form id="whatsapp-order-form">
+            <input type="text" id="cust_name" placeholder="Your Name" required>
+            <input type="tel" id="cust_phone" placeholder="Phone Number" required>
+            
+            <div class="guest-selector">
+                <label for="guests">Number of Guests:</label>
+                <select id="guests" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="5+">5+</option>
+                </select>
+            </div>
 
+            <textarea id="order_details" placeholder="What would you like to order? (e.g. 2 Cappuccinos, 1 Veg Momo)" required style="width: 100%; padding: 12px; margin: 10px 0; border-radius: 8px; border: 1px solid #ccc; font-family: 'Poppins';"></textarea>
+            
+            <button type="button" onclick="sendToWhatsApp()" class="btn-primary" style="background-color: #25D366; border-color: #25D366;">
+                Order via WhatsApp
+            </button>
+        </form>
+    </div>
+</section>
+    
     <div id="menuModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" id="closeMenu">×</span>
