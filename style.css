@@ -144,18 +144,34 @@ body {
     #automation-form { flex-direction: column; }
     .offer-container { padding: 25px; }
 }
-.guest-selector {
-    margin: 10px 0;
-    text-align: left;
+/* Improved Guest Selector Visibility */
+.guest-box { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    margin-bottom: 15px; 
+    background: #f1ede4; /* Light coffee-toned background for contrast */
+    padding: 12px 15px; 
+    border-radius: 8px;
+    border: 1px solid #d4af37; /* Gold border to match branding */
+}
+
+.guest-box label { 
+    font-weight: 600; 
+    color: #4e342e; /* Dark brown for clear visibility */
+    font-size: 0.95rem;
+}
+
+#guests {
+    background: white;
+    color: #1a1412;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
     font-family: 'Poppins', sans-serif;
 }
 
-.guest-selector select {
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-left: 10px;
-}
 
 #whatsapp-order-form input {
     width: 100%;
