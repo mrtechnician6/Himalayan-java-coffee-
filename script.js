@@ -92,3 +92,34 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).classList.add("active");
     evt.currentTarget.classList.add("active");
       }
+
+function sendToWhatsApp() {
+    // The Manager's Phone Number (including country code, without + or spaces)
+    const managerNumber = "9779804650880"; 
+
+    // Get Form Values
+    const name = document.getElementById('cust_name').value;
+    const phone = document.getElementById('cust_phone').value;
+    const guests = document.getElementById('guests').value;
+    const order = document.getElementById('order_details').value;
+
+    // Validation
+    if (name === "" || phone === "" || order === "") {
+        alert("Please fill in all the details before ordering.");
+        return;
+    }
+
+    // Format the Message
+    const message = `*New Order from Himalayan Java Basantapur*%0a` +
+                    `----------------------------%0a` +
+                    `*Name:* ${name}%0a` +
+                    `*Phone:* ${phone}%0a` +
+                    `*Guests:* ${guests}%0a` +
+                    `*Order:* ${order}`;
+
+    // Create WhatsApp URL
+    const whatsappURL = `https://wa.me/${managerNumber}?text=${message}`;
+
+    // Open in New Tab
+    window.open(whatsappURL, '_blank').focus();
+}
